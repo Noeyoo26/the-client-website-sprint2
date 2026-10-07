@@ -25,10 +25,23 @@ body {
     justify-content: space-between;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    background-color: #222; /* Fallback kleur als de foto laadt */
+    background-color: #222; 
 }
 
-/* Stijl voor de kaart zodat deze de hele achtergrond vult */
+.pin-plant {
+    position: absolute; 
+    top: 20%;           
+    left: 60%;          
+    width: 80px;        
+    height: auto;
+    z-index: 10;        
+    transform: translate(-50%, -50%); 
+}
+
+.pin-plant img {
+    width: 100%;
+}
+
 .map-image {
     position: absolute;
     top: 80%;
