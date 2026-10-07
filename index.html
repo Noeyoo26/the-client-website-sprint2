@@ -1,1 +1,87 @@
-<!-- HTML -->
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloemenveld Prototype</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- De hoofdcontainer die de kaart als achtergrond heeft -->
+    <div class="app-container">
+        <img src="./assets/Bloemenveld_kaart.svg" alt="Kaart van het bloemenveld" class="map-image">
+
+        <!-- Bovenste navigatie / header -->
+        <header class="app-header">
+            <button class="menu-btn" aria-label="Menu">&#9776;</button>
+            <h1>Verkennen</h1>
+        </header>
+
+        <!-- Middelste inhoud (hier staat nu het pop-up kaartje in) -->
+        <main class="app-content">
+            
+            <div class="popup-card">
+                <!-- Sleep-streepje bovenaan de kaart -->
+                <div class="drag-handle"></div>
+
+                <!-- Tabs bovenaan -->
+                <div class="tabs">
+                    <button class="tab active">Kaart Overzicht</button>
+                    <button class="tab">Plantencollectie</button>
+                </div>
+
+                <!-- Inhoud van het kaartje (tekst links, foto rechts) -->
+                <div class="card-body">
+                    <div class="text-content">
+                        <h2>Witte Dovenetel</h2>
+                        <p class="scientific-name">Lamium album</p>
+                        
+                        <p class="description">
+                            <strong>Lijkt op brandnetel maar prikt niet.</strong> Bloeit lang door zacht weer.
+                        </p>
+                        
+                        <div class="ecological-role">
+                            <strong>Ecologische rol:</strong>
+                            <p>hommels halen nectar via "gaatjes" in de bloem en voor veel vlinders een plant van waarde</p>
+                        </div>
+                    </div>
+
+                    <div class="image-content">
+                        <!-- Vervang 'plant.jpg' eventueel met je eigen afbeeldingsnaam -->
+                        <img src="plant.jpg" alt="Witte Dovenetel">
+                    </div>
+                </div>
+
+                <!-- Pijltje onderaan -->
+                <div class="card-footer">
+                    <span class="arrow-down">&#9662;</span>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Onderste navigatiebalk -->
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-text">Home</span>
+            </a>
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">🗺️</span>
+                <span class="nav-text">Veldverkenner</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📰</span>
+                <span class="nav-text">Nieuws</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">🌸</span>
+                <span class="nav-text">Collectie</span>
+            </a>
+        </nav>
+
+    </div>
+
+</body>
+</html>

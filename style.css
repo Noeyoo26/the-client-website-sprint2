@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Zorg dat de container de positie bewaakt */
+.app-container {
+    width: 100%;
+    max-width: 412px;
+    height: 100vh;
+    max-height: 847px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    background-color: #222; /* Fallback kleur als de foto laadt */
+}
+
+/* Stijl voor de kaart zodat deze de hele achtergrond vult */
+.map-image {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    z-index: 0;
+
+    transform-origin:  center;
+    transform: rotate(90deg) scale(4.5) translate(0, 0)
+   
+    
+}
+
+/* Zorg dat alle andere elementen (header, content, nav) BOVEN de kaart komen te staan */
+.app-header, .app-content, .bottom-nav {
+    position: relative;
+    z-index: 1;
+}
+
+/* Bovenste balk (Header) */
+.app-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(5px);
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.app-header h1 {
+    font-size: 20px;
+    color: #4a3b32;
+    align-items: center;
+}
+
+
+/* Inhoudsgebied */
+.app-content {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: flex-end; /* Zorgt dat de popup onderaan komt te staan */
+    padding: 15px;
+}
+
+/* Pop-up kaart onderaan */
+.popup-card {
+    background: #ffffff;
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    padding: 15px 20px 10px 20px;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Sleep-streepje */
+.drag-handle {
+    width: 40px;
+    height: 4px;
+    background-color: #ccc;
+    border-radius: 2px;
+    margin: 0 auto 12px auto;
+}
+
+/* Tabs stijl */
+.tabs {
+    display: flex;
+    background-color: #f2ede9;
+    border-radius: 20px;
+    padding: 4px;
+    margin-bottom: 15px;
+}
+
+.tab {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #7c6f64;
+    border-radius: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.tab.active {
+    background-color: #a38c75;
+    color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Inhoud van de kaart (Grid: links tekst, rechts foto) */
+.card-body {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.text-content h2 {
+    font-size: 18px;
+    color: #5c4033;
+    margin-bottom: 2px;
+}
+
+.scientific-name {
+    font-size: 12px;
+    font-style: italic;
+    color: #8c7b70;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 12px;
+    color: #333;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.ecological-role {
+    font-size: 11px;
+    color: #333;
+    line-height: 1.3;
+}
+
+.ecological-role strong {
+    color: #222;
+}
+
+/* Foto styling */
+.image-content {
+    width: 110px;
+    flex-shrink: 0;
+}
+
+.image-content img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* Pijltje onderaan */
+.card-footer {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.arrow-down {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Onderste navigatiebalk */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+}
+
+.nav-item {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #888;
+    font-size: 12px;
+}
+
+.nav-icon {
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.nav-item.active {
+    color: #8C6239;
+    font-weight: bold;
+}
