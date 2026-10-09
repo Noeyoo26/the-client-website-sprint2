@@ -9,11 +9,11 @@
 </head>
 <body>
 
-    <!-- De hoofdcontainer die de kaart als achtergrond heeft -->
+     <!-- De hoofdcontainer met de map op de achtergrond-->
     <div class="app-container">
         <img src="./assets/Bloemenveld_kaart.svg" alt="Kaart van het bloemenveld" class="map-image">
 
-        <!-- Bovenste navigatie / header -->
+        
         <header class="app-header">
             <button class="menu-btn" aria-label="Menu">&#9776;</button>
             <h1>Verkennen</h1>
@@ -23,20 +23,20 @@
         <img src="./assets/Pin_plant-02.svg" alt="pin-plant">
         </div>
                         
-        <!-- Middelste inhoud (hier staat nu het pop-up kaartje in) -->
+        <!-- Middelste inhoud -->
         <main class="app-content">
             
             <div class="popup-card">
-                <!-- Sleep-streepje bovenaan de kaart -->
+                <!-- Sleep-streepje bovenaan de kaart dit moet ik nog doen -->
                 <div class="drag-handle"></div>
 
                 <!-- Tabs bovenaan -->
-                <div class="tabs">
-                    <button class="tab active">Kaart Overzicht</button>
-                    <button class="tab">Plantencollectie</button>
-                </div>
+                <ul class="tabs">
+                    <li><button class="tab active">Kaart Overzicht</button></li>
+                    <li> <button class="tab">Plantencollectie</button></li>
+                </ul>
 
-                <!-- Inhoud van het kaartje (tekst links, foto rechts) -->
+                <!-- Inhoud van het kaartje -->
                 <div class="card-body">
                     <div class="text-content">
                         <h2>Witte Dovenetel</h2>
@@ -58,41 +58,54 @@
                     </div>
                 </div>
 
-                <!-- Pijltje onderaan -->
-                <div class="card-footer">
+                <!-- Footer Pijltje onderaan -->
+                <footer class="card-footer">
                     <span class="arrow-down">&#9662;</span>
-                </div>
-            </div>
-
+                    </footer>
+                </slection>
         </main>
+
 
         <!-- Onderste navigatiebalk -->
         <nav class="bottom-nav">
+            <ul>
+                <li>
             <a href="#" class="nav-item">
                 <span class="nav-icon">
                     <img src="assets/icon-02.svg" alt="Home">
                 </span>
                 <span class="nav-text">Home</span>
             </a>
+        </li>
+
+        <li>
             <a href="#" class="nav-item active">
                 <span class="nav-icon">
                     <img src="assets/icon-03.svg" alt="Veldverkenner">
                 </span>
                 <span class="nav-text">Veldverkenner</span>
             </a>
+        </li>
+
+        <li>
             <a href="#" class="nav-item">
                 <span class="nav-icon">
                     <img src="assets/icon-04.svg" alt="Nieuws">
                 </span>
                 <span class="nav-text">Nieuws</span>
             </a>
+        </li>
+
+        <li>
             <a href="#" class="nav-item">
                 <span class="nav-icon">
                     <img src="assets/icon-01.svg" alt="Collectie">
                 </span>
                 <span class="nav-text">Collectie</span>
             </a>
-        </nav>
+        </li>
+        </ul>
+</nav>
 
     </div>
 
