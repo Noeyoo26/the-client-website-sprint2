@@ -210,8 +210,10 @@ body {
 }
 
 /* Onderste navigatiebalk */
-.bottom-nav {
+.bottom-nav ul,
+.tabs {
     display: flex;
+    list-style: none;
     justify-content: space-around;
     align-items: center;
     background-color: #fff;
