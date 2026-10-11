@@ -95,12 +95,13 @@ body {
     position: relative;
     display: flex;
     align-items: flex-end; /* Zorgt dat de popup onderaan komt te staan */
-    padding: 15px;
+    padding: 0px;
 }
 
 /* Pop-up kaart onderaan */
 .popup-card {
     background: #ffffff;
+    opacity: 99%;
     width: 100%;
     border-radius: 30px 30px 0 0;
     padding: 15px 20px 10px 20px;
@@ -123,6 +124,7 @@ body {
     border-radius: 20px;
     padding: 4px;
     margin-bottom: 15px;
+    list-style: none;
 }
 
 .tab {
@@ -140,7 +142,7 @@ body {
 
 .tab.active {
     background-color: #a38c75;
-    color: #ffffff;
+    color: #ffffff ;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -210,8 +212,7 @@ body {
 }
 
 /* Onderste navigatiebalk */
-.bottom-nav ul,
-.tabs {
+.bottom-nav ul {
     display: flex;
     list-style: none;
     justify-content: space-around;
@@ -219,6 +220,7 @@ body {
     background-color: #fff;
     padding: 10px 0;
     box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+    margin: 0;
 }
 
 .nav-item {
