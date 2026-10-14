@@ -5,10 +5,10 @@
 }
 
 :root{
-    primary-color: #a38c75;
-    card-background: #ffffff;
-    text-dark: #5c4033;
-    font-family: montserrat;
+    --primary-color: #a38c75;
+    --card-background: #ffffff;
+    --text-dark: #5c4033;
+    --font-family: montserrat;
 }
 
 body {
